@@ -1,4 +1,4 @@
-Summary:	SynCE: Communication application
+Summary:	Serial connection daemon for Pocket PC devices
 Name:		synce-vdccm
 Version:	0.10.0
 Release:	0.1
@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
 Patch0:		%{name}-dont-chown.patch
 Patch1:		%{name}-uint16_t.patch
 URL:		http://synce.sourceforge.net/
+BuildRequires:	dbus-glib-devel
 BuildRequires:	hal-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	synce-libsynce-devel = %{version}
@@ -16,7 +17,9 @@ Conflicts:	synce-kde < 0.9.1-4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-vdccm is part of the SynCE project
+Vdccm is a daemon running as the user on the desktop machine, which
+the Pocket PC connects to. This vdccm is a replacement of the original
+dccm and the vdccm comming with SynCE-KDE.
 
 %prep
 %setup -q -n vdccm-%{version}
