@@ -1,0 +1,10 @@
+--- vdccm-0.10.0/lib/udpsocket.h~	2007-08-29 03:49:25.000000000 +0300
++++ vdccm-0.10.0/lib/udpsocket.h	2007-08-29 03:49:27.000000000 +0300
+@@ -14,6 +14,7 @@
+ 
+ #include <netsocket.h>
+ #include <string>
++#include <stdint.h>
+ 
+ /**
+ 	@author Volker Christian <voc@synce.org>
