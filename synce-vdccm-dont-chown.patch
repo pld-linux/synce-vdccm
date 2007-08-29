@@ -1,0 +1,13 @@
+--- src/Makefile.am~	2006-11-30 07:33:04.000000000 +0800
++++ src/Makefile.am	2007-06-01 10:08:02.000000000 +0800
+@@ -39,8 +39,8 @@
+ AM_CXXFLAGS = -pedantic-errors -Wall
+ 
+ install-exec-hook:
+-	chown root $(DESTDIR)$(bindir)/vdccm
+-	chmod u+s $(DESTDIR)$(bindir)/vdccm
++	chown root $(DESTDIR)$(bindir)/vdccm || :
++	chmod u+s $(DESTDIR)$(bindir)/vdccm || :
+ 
+ man_MANS = vdccm.1
+ 
