@@ -7,10 +7,12 @@ Group:		Libraries
 Source0:	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
 # Source0-md5:	f6fcb49297cf80a028bfe75a8e1bdc4d
 Patch0:		%{name}-dont-chown.patch
+Patch1:		%{name}-uint16_t.patch
 URL:		http://synce.sourceforge.net/
 BuildRequires:	hal-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	synce-libsynce-devel = %{version}
-Conflicts:	synce-kde < 0.9.1-2
+Conflicts:	synce-kde < 0.9.1-4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -19,6 +21,7 @@ vdccm is part of the SynCE project
 %prep
 %setup -q -n vdccm-%{version}
 %patch0 -p0
+%patch1 -p1
 
 %build
 %configure \
