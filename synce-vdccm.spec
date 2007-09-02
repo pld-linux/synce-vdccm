@@ -1,4 +1,5 @@
 Summary:	Serial connection daemon for Pocket PC devices
+Summary(pl.UTF-8):	Demon połączenia szeregowego dla urządzeń Pocket PC
 Name:		synce-vdccm
 Version:	0.10.0
 Release:	0.1
@@ -9,10 +10,12 @@ Source0:	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
 Patch0:		%{name}-dont-chown.patch
 Patch1:		%{name}-uint16_t.patch
 URL:		http://synce.sourceforge.net/
-BuildRequires:	dbus-glib-devel
+BuildRequires:	dbus-glib-devel >= 0.61
+BuildRequires:	glib2-devel >= 1:2.4
 BuildRequires:	hal-devel
 BuildRequires:	libstdc++-devel
-BuildRequires:	synce-libsynce-devel = %{version}
+BuildRequires:	pkgconfig
+BuildRequires:	synce-libsynce-devel >= %{version}
 Conflicts:	synce-kde < 0.9.1-4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,6 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README TODO
+%doc AUTHORS COPYING ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
