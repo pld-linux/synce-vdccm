@@ -1,12 +1,14 @@
+# TODO:
+# - update pl,init script
 Summary:	Serial connection daemon for Pocket PC devices
 Summary(pl.UTF-8):	Demon połączenia szeregowego dla urządzeń Pocket PC
 Name:		synce-vdccm
-Version:	0.10.0
+Version:	0.10.1
 Release:	0.1
 License:	MIT
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
-# Source0-md5:	f6fcb49297cf80a028bfe75a8e1bdc4d
+Source0:	http://dl.sourceforge.net/synce/vdccm-%{version}.tar.gz
+# Source0-md5:	43bca4c2fdb658f99b07549fa03832e0
 Patch0:		%{name}-dont-chown.patch
 Patch1:		%{name}-uint16_t.patch
 URL:		http://synce.sourceforge.net/
@@ -26,12 +28,14 @@ dccm and the vdccm comming with SynCE-KDE.
 
 %prep
 %setup -q -n vdccm-%{version}
-%patch0 -p0
+%patch0 -p1
 %patch1 -p1
 
 %build
 %configure \
-	--with-libsynce=%{_prefix}
+	--with-libsynce=%{_prefix} \
+	--enable-desktop-integration
+
 %{__make}
 
 %install

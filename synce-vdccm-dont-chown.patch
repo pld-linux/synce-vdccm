@@ -1,5 +1,6 @@
---- src/Makefile.am~	2006-11-30 07:33:04.000000000 +0800
-+++ src/Makefile.am	2007-06-01 10:08:02.000000000 +0800
+diff -uNr vdccm-0.10.1.orig/src/Makefile.am vdccm-0.10.1/src/Makefile.am
+--- vdccm-0.10.1.orig/src/Makefile.am	2006-11-30 07:33:04.000000000 +0800
++++ vdccm-0.10.1/src/Makefile.am	2007-06-01 10:08:02.000000000 +0800
 @@ -39,8 +39,8 @@
  AM_CXXFLAGS = -pedantic-errors -Wall
  
@@ -11,3 +12,16 @@
  
  man_MANS = vdccm.1
  
+diff -uNr vdccm-0.10.1.orig/src/Makefile.in vdccm-0.10.1/src/Makefile.in
+--- vdccm-0.10.1.orig/src/Makefile.in	2007-12-19 19:59:01.000000000 +0000
++++ vdccm-0.10.1/src/Makefile.in	2008-05-17 14:37:03.000000000 +0000
+@@ -626,7 +626,7 @@
+ 
+ 
+ install-exec-hook:
+-	chown root $(DESTDIR)$(bindir)/vdccm
+-	chmod u+s $(DESTDIR)$(bindir)/vdccm
++	chown root $(DESTDIR)$(bindir)/vdccm || :
++	chmod u+s $(DESTDIR)$(bindir)/vdccm || :
+ 
+ @ENABLE_DESKTOP_INTEGRATION_TRUE@%-glue.h: %.xml
