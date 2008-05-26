@@ -1,5 +1,5 @@
 # TODO:
-# - update pl,init script
+# - update init script
 Summary:	Serial connection daemon for Pocket PC devices
 Summary(pl.UTF-8):	Demon połączenia szeregowego dla urządzeń Pocket PC
 Name:		synce-vdccm
@@ -25,6 +25,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Vdccm is a daemon running as the user on the desktop machine, which
 the Pocket PC connects to. This vdccm is a replacement of the original
 dccm and the vdccm comming with SynCE-KDE.
+
+%description -l pl.UTF-8
+vdccm to demon działający jako użytkownik na maszynie użytkownika, z
+którą połączony jest Pocket PC. Jest zamiennikiem oryginalnego dccm i
+vdccm dołączanego do SynCE-KDE.
 
 %prep
 %setup -q -n vdccm-%{version}
