@@ -1,5 +1,7 @@
 # TODO:
 # - update init script
+# - fix Group (Applications/Networking, Applications/System?)
+#
 Summary:	Serial connection daemon for Pocket PC devices
 Summary(pl.UTF-8):	Demon połączenia szeregowego dla urządzeń Pocket PC
 Name:		synce-vdccm
