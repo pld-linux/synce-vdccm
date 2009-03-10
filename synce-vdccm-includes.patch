@@ -1,0 +1,67 @@
+diff -burNp vdccm-0.10.1/lib/tcpconnectedsocket.cpp vdccm-0.10.1-dud/lib/tcpconnectedsocket.cpp
+--- vdccm-0.10.1/lib/tcpconnectedsocket.cpp	2006-06-29 21:01:48.000000000 +0200
++++ vdccm-0.10.1-dud/lib/tcpconnectedsocket.cpp	2009-03-10 23:15:15.456627427 +0100
+@@ -23,6 +23,7 @@
+ #include "tcpconnectedsocket.h"
+ #include <arpa/inet.h>
+ #include <netdb.h>
++#include <cstring>
+ 
+ // Ugly hack - the header <linux/in.h> could not be included
+ // due to conflicts with other systemheader
+diff -burNp vdccm-0.10.1/lib/tcpclientsocket.cpp vdccm-0.10.1-dud/lib/tcpclientsocket.cpp
+--- vdccm-0.10.1/lib/tcpclientsocket.cpp	2006-03-22 20:59:14.000000000 +0100
++++ vdccm-0.10.1-dud/lib/tcpclientsocket.cpp	2009-03-10 23:17:48.572729421 +0100
+@@ -22,6 +22,7 @@
+  ***************************************************************************/
+ #include "tcpclientsocket.h"
+ #include <netdb.h>
++#include <cstring>
+ 
+ using namespace std;
+ 
+diff -burNp vdccm-0.10.1/lib/tcpsocket.cpp vdccm-0.10.1-dud/lib/tcpsocket.cpp
+--- vdccm-0.10.1/lib/tcpsocket.cpp	2006-06-29 21:01:48.000000000 +0200
++++ vdccm-0.10.1-dud/lib/tcpsocket.cpp	2009-03-10 23:19:11.842483831 +0100
+@@ -23,7 +23,7 @@
+ #include "tcpsocket.h"
+ #include <arpa/inet.h>
+ #include <netdb.h>
+-
++#include <cstring>
+ 
+ using namespace std;
+ 
+diff -burNp vdccm-0.10.1/lib/udpsocket.cpp vdccm-0.10.1-dud/lib/udpsocket.cpp
+--- vdccm-0.10.1/lib/udpsocket.cpp	2006-05-07 17:49:36.000000000 +0200
++++ vdccm-0.10.1-dud/lib/udpsocket.cpp	2009-03-10 23:20:08.775811699 +0100
+@@ -11,6 +11,7 @@
+ //
+ #include "udpsocket.h"
+ #include <netdb.h>
++#include <cstring>
+ 
+ using namespace std;
+ 
+diff -burNp vdccm-0.10.1/src/rapiclient.cpp vdccm-0.10.1-dud/src/rapiclient.cpp
+--- vdccm-0.10.1/src/rapiclient.cpp	2006-05-06 15:07:32.000000000 +0200
++++ vdccm-0.10.1-dud/src/rapiclient.cpp	2009-03-10 23:21:38.926291851 +0100
+@@ -15,6 +15,7 @@
+ 
+ #include <multiplexer.h>
+ 
++#include <cstring>
+ #include <iostream>
+ #include <iomanip>
+ #include <errno.h>
+diff -burNp vdccm-0.10.1/src/rapiclient.h vdccm-0.10.1-dud/src/rapiclient.h
+--- vdccm-0.10.1/src/rapiclient.h	2006-05-06 15:07:32.000000000 +0200
++++ vdccm-0.10.1-dud/src/rapiclient.h	2009-03-10 23:23:34.189933997 +0100
+@@ -9,6 +9,7 @@
+ // Copyright: See COPYING file that comes with this distribution
+ //
+ //
++#include <climits>
+ #ifndef RAPICLIENT_H
+ #define RAPICLIENT_H
+ 
