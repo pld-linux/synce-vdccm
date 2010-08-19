@@ -1,3 +1,13 @@
+Fix missing header error on recent gcc
+
+rapiconnection.cpp: In member function 'void RapiConnection::handshakeClientInitialized(unsigned char*)':
+rapiconnection.cpp:109:21: error: 'stderr' was not declared in this scope
+rapiconnection.cpp:109:50: error: 'fprintf' was not declared in this scope
+rapiconnection.cpp:111:21: error: 'printf' was not declared in this scope
+make[3]: *** [rapiconnection.o] Error 1
+
+Signed-off-by: Elan Ruusamäe <glen@delfi.ee>
+
 --- vdccm-0.10.1/src/rapiconnection.cpp~	2007-05-10 21:27:03.000000000 +0300
 +++ vdccm-0.10.1/src/rapiconnection.cpp	2010-08-19 12:02:26.826534642 +0300
 @@ -22,6 +22,7 @@
