@@ -7,6 +7,7 @@ rapiconnection.cpp:111:21: error: 'printf' was not declared in this scope
 make[3]: *** [rapiconnection.o] Error 1
 
 Signed-off-by: Elan Ruusamäe <glen@delfi.ee>
+Upstream-Tracker: https://sourceforge.net/tracker/?func=detail&aid=3048511&group_id=30550&atid=399603
 
 --- vdccm-0.10.1/src/rapiconnection.cpp~	2007-05-10 21:27:03.000000000 +0300
 +++ vdccm-0.10.1/src/rapiconnection.cpp	2010-08-19 12:02:26.826534642 +0300
