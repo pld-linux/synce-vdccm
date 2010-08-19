@@ -14,6 +14,7 @@ Source0:	http://dl.sourceforge.net/synce/vdccm-%{version}.tar.gz
 Patch0:		%{name}-dont-chown.patch
 Patch1:		%{name}-includes.patch
 Patch2:		%{name}-uint16_t.patch
+Patch3:		gcc.patch
 URL:		http://synce.sourceforge.net/
 BuildRequires:	dbus-glib-devel >= 0.61
 BuildRequires:	glib2-devel >= 1:2.4
@@ -39,6 +40,7 @@ vdccm dołączanego do SynCE-KDE.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 %configure \

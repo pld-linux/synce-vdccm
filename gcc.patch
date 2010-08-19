@@ -1,0 +1,10 @@
+--- vdccm-0.10.1/src/rapiconnection.cpp~	2007-05-10 21:27:03.000000000 +0300
++++ vdccm-0.10.1/src/rapiconnection.cpp	2010-08-19 12:02:26.826534642 +0300
+@@ -22,6 +22,7 @@
+ #include "synce_log.h"
+ #include <algorithm>
+ #include <multiplexer.h>
++#include <stdio.h>
+ 
+ using namespace std;
+ 
