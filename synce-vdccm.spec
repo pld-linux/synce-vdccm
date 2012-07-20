@@ -1,7 +1,10 @@
 # TODO:
+# - remove in favor of synce-core?
 # - update init script
 # - fix Group (Applications/Networking, Applications/System?)
 #
+%bcond_with	hal	# build without HAL support
+
 Summary:	Serial connection daemon for Pocket PC devices
 Summary(pl.UTF-8):	Demon połączenia szeregowego dla urządzeń Pocket PC
 Name:		synce-vdccm
@@ -16,9 +19,9 @@ Patch1:		%{name}-includes.patch
 Patch2:		%{name}-uint16_t.patch
 Patch3:		gcc.patch
 URL:		http://synce.sourceforge.net/
-BuildRequires:	dbus-glib-devel >= 0.61
+%{?with_hal:BuildRequires:	dbus-glib-devel >= 0.61}
 BuildRequires:	glib2-devel >= 1:2.4
-BuildRequires:	hal-devel
+%{?with_hal:BuildRequires:	hal-devel}
 BuildRequires:	libstdc++-devel
 BuildRequires:	pkgconfig
 BuildRequires:	synce-libsynce-devel >= %{version}
@@ -45,7 +48,7 @@ vdccm dołączanego do SynCE-KDE.
 %build
 %configure \
 	--with-libsynce=%{_prefix} \
-	--enable-desktop-integration
+	%{?with_hal:--enable-desktop-integration}
 
 %{__make}
 
