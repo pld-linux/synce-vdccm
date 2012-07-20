@@ -9,7 +9,7 @@ Summary:	Serial connection daemon for Pocket PC devices
 Summary(pl.UTF-8):	Demon połączenia szeregowego dla urządzeń Pocket PC
 Name:		synce-vdccm
 Version:	0.10.1
-Release:	1	
+Release:	2
 License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/synce/vdccm-%{version}.tar.gz
