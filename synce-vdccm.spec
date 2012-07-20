@@ -18,6 +18,7 @@ Patch0:		%{name}-dont-chown.patch
 Patch1:		%{name}-includes.patch
 Patch2:		%{name}-uint16_t.patch
 Patch3:		gcc.patch
+Patch4:		%{name}-gcc47.patch
 URL:		http://synce.sourceforge.net/
 %{?with_hal:BuildRequires:	dbus-glib-devel >= 0.61}
 BuildRequires:	glib2-devel >= 1:2.4
@@ -44,6 +45,7 @@ vdccm dołączanego do SynCE-KDE.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 %configure \

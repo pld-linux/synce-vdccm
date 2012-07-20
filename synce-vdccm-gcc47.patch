@@ -1,0 +1,34 @@
+diff -ur vdccm-0.10.1/lib/continousnode.cpp vdccm-0.10.1-gcc.4.7/lib/continousnode.cpp
+--- vdccm-0.10.1/lib/continousnode.cpp	2006-03-28 00:40:15.000000000 +0200
++++ vdccm-0.10.1-gcc.4.7/lib/continousnode.cpp	2012-07-20 11:43:35.881742278 +0200
+@@ -23,6 +23,8 @@
+ #include "continousnode.h"
+ #include "timernodemanager.h"
+ 
++#include <cstdlib>
++
+ ContinousNode::ContinousNode(const int sec, const int usec)
+  : TimerNode()
+ {
+diff -ur vdccm-0.10.1/lib/localclientsocket.cpp vdccm-0.10.1-gcc.4.7/lib/localclientsocket.cpp
+--- vdccm-0.10.1/lib/localclientsocket.cpp	2006-03-22 20:59:14.000000000 +0100
++++ vdccm-0.10.1-gcc.4.7/lib/localclientsocket.cpp	2012-07-20 11:47:42.961733566 +0200
+@@ -22,6 +22,7 @@
+  ***************************************************************************/
+ #include "localclientsocket.h"
+ #include <sys/socket.h>
++#include <cstddef>
+ 
+ #ifndef PF_LOCAL
+ #define PF_LOCAL PF_UNIX
+diff -ur vdccm-0.10.1/lib/localsocket.cpp vdccm-0.10.1-gcc.4.7/lib/localsocket.cpp
+--- vdccm-0.10.1/lib/localsocket.cpp	2006-03-28 00:40:15.000000000 +0200
++++ vdccm-0.10.1-gcc.4.7/lib/localsocket.cpp	2012-07-20 11:47:31.395067302 +0200
+@@ -22,6 +22,7 @@
+  ***************************************************************************/
+ #include "localsocket.h"
+ #include <sys/socket.h>
++#include <cstddef>
+ 
+ #ifndef PF_LOCAL
+ #define PF_LOCAL PF_UNIX
